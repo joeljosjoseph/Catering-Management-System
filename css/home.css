@@ -1,0 +1,333 @@
+#container-1{
+    width:max-content;
+}
+#nav_1{
+    
+    padding-left: 100px;
+    padding-right: 15px;
+    padding-top: 0px;
+}
+/* @font-face {
+    font-family: Custom_1;
+    src: url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
+}
+p{
+    font-family: Custom_1;
+} */
+/* @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('/Font/static/DancingScript-Regular.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ /
+         url('css_fonts/open-sans-v18-latin-regular.woff') format('woff'); / Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ 
+  } */
+  @font-face {
+    font-family: myFirstFont;
+    src: url('/Font/static/DancingScript-Regular.ttf');
+  }
+ 
+  body{
+    background-image: url(../image/homeBg1.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  nav{
+      background-color: rgba(0,0,0,.02);
+  }
+
+
+  
+  #home-container-1{
+      background-image: url(../image/home_bg.jpg);
+      height: 623px;
+      width: 100%;
+      margin-top: 140px;
+      background-size: cover;
+      filter:brightness(80%);
+      
+  }
+
+  .ui-w-80 {
+    width: 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24,28,33,0.1);
+    background: rgba(0,0,0,0);
+    color: #4E5155;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background: transparent;
+    color: #26B4FF;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24,28,33,0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+
+
+.account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+.account-settings-multiselect ~ .select2-container {
+    width: 100% !important;
+}
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+.light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+.material-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+.material-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+.dark-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+.dark-style .account-settings-links .list-group-item.active {
+    color: #fff !important;
+}
+.light-style .account-settings-links .list-group-item.active {
+    color: #4E5155 !important;
+}
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24,28,33,0.03) !important;
+}
+
+#admin-menu-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}  
+
+.card:hover {
+    box-shadow:0 30px 70px rgba(0,0,0,.2);
+}
+
+#admin-menu-card    {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 30px;
+}
+
+#admin-menu-card-body-active  {
+    height: 250px;
+    width: 200;
+    margin: 15px 0px;
+    text-align: center;
+    color: green;
+    transition: all 0.7s ease;
+}
+#admin-menu-card-body-inactive  {
+    height: 250px;
+    width: 200;
+    margin: 15px 0px;
+    text-align: center;
+    color: red;
+    transition: all 0.7s ease;
+}
+#admin-menu-card-body-active:hover  {
+    box-shadow:0 5px 10px green;
+    transition: all 0.7s ease;
+}
+#admin-menu-card-body-inactive:hover  {
+    box-shadow:0 5px 10px red;
+    transition: all 0.7s ease;
+}
+/* #addFoodPlus:hover{
+    
+    box-shadow: 0 0 15px  #3b5998;
+    transition: all 0.5s ease;
+} */
+
+#addFoodPlusIcon:hover{
+    color: #008cf0;
+    text-shadow: 0 0 15px #008cf0;
+    transition: all 0.5s ease;
+}
+
+#shop-category-card {
+    height: 400px;
+    width: 300px;
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.cat-card-img{
+    min-height: 325px;
+    min-width: 300px;
+}
+.container-3  {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    
+    
+}
+.container-2{
+    background-image: url(https://image.freepik.com/free-photo/delicious-healthy-asian-food-gray-textured-background-with-copy-space_24972-1024.jpg);
+    
+    width:1200px;
+    height:500px;
+    background-size:cover;
+    background-position: center;
+    
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.category-card-body {
+    height: 250px;
+    width: 200;
+    margin: 15px 0px;
+    text-align: center;
+
+}
+.container-text {
+    position: relative;
+    text-align: center;
+    top: 40%;
+}
+#btn-home:hover   {
+    box-shadow: 0 0 5px red;
+}
+
+#item_name:focus    {
+    outline: none;
+}
+#item_add_cart:hover    {
+    box-shadow: 0 0 5px grey;
+    text-shadow: 0 0 1px grey;
+}
+
+#admin-item-input:focus {
+    outline: none !important;
+}
+
+#cart-checkout:hover    {
+    box-shadow: 0 0 5px green;
+    text-shadow:  0 0 1px green;
+}
+#cart-continue:hover    {
+    box-shadow: 0 0 5px grey;
+    text-shadow:  0 0 1px grey;
+}
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel a:hover {
+    color: #f1f1f1;
+  }
+
+  #admin-cancel-order:hover {
+    box-shadow: 0 0 3px red;
+  }
+
+  #green-button {
+      border: 2px solid green;
+      color: green;
+  }
+  #green-button:hover {
+    box-shadow: 0 0 3px green;
+  }
+  #red-button   {
+      border: 2px solid red ;
+      color: red;
+  }
+  #red-button:hover   {
+    box-shadow: 0 0 3px red;
+  }
+ 
+  #explore-item:hover {
+      box-shadow: 2px 7px 10px #4E5155;
+      transition: ease-in-out .5s;
+  } 
+
+  #navbar-nav li{
+      display: inline-block;
+      
+  }
+  #navbar-nav a {
+      text-decoration: none;
+  }
+  #navbar-nav a:hover    {
+      color:black;
+  }
+  #navbar-nav a::before  {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0%;
+      background-color: #333;
+      transition: ease-in-out 300ms;
+
+  }
+  #navbar-nav a:hover::before   {
+    width: 100%;
+  }

@@ -1,0 +1,105 @@
+CREATE DATABASE miniproject;
+CREATE TABLE login  (
+    username varchar(25) PRIMARY KEY,
+    password varchar(25) NOT NULL,
+    user_type varchar(10) NOT NULL
+);
+
+CREATE TABLE customer (
+    cust_id INT AUTO_INCREMENT PRIMARY KEY ,
+    username varchar(25) ,
+    c_fname varchar(20) NOT NULL ,
+    c_mname varchar(20) NOT NULL ,
+    c_lname varchar(20) NOT NULL ,
+    c_phno numeric(10) UNIQUE ,
+    c_bno varchar(10) NOT NULL,
+    c_street varchar(25) NOT NULL,
+    c_district varchar(20) NOT NULL,
+    c_pincode numeric(6) NOT NULL,
+    FOREIGN KEY(username) REFERENCES login(username)
+)
+CREATE TABLE category (
+	category_id INT AUTO_INCREMENT PRIMARY KEY,
+	category_name VARCHAR(20) NOT NULL
+)
+
+CREATE TABLE sub_category (
+	subcategory_id INT AUTO_INCREMENT PRIMARY KEY,
+    	category_id INT ,
+	subcategory_name VARCHAR(20) NOT NULL,
+    	FOREIGN KEY(category_id) REFERENCES category(category_id)
+)
+
+CREATE TABLE item (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    subcategory_id INT,
+    item_name VARCHAR(20) NOT NULL,
+    description VARCHAR(200) NOT NULL,
+    price numeric(8,2) NOT NULL,
+    FOREIGN KEY(subcategory_id) REFERENCES sub_category(subcategory_id)
+    )
+CREATE TABLE menuMaster (
+    menumaster_id INT AUTO_INCREMENT PRIMARY KEY ,
+    cust_id INT ,
+    quantity NUMERIC NOT NULL,
+    tot_amount NUMERIC(10,2),
+    v_date DATE NOT NULL,
+    v_street VARCHAR(25) NOT NULL,
+    v_district VARCHAR(25) NOT NULL,
+    v_pincode NUMERIC(6) NOT NULL,
+    v_time TIME NOT NULL,
+    FOREIGN KEY(cust_id) REFERENCES customer(cust_id)
+    )
+CREATE TABLE menuchild (
+    menuchild_id INT AUTO_INCREMENT PRIMARY KEY,
+    menumaster_id INT ,
+    item_id INT,
+    FOREIGN KEY(menumaster_id) REFERENCES menumaster(menumaster_id),
+    FOREIGN KEY(item_id) REFERENCES item(item_id)
+    )
+
+CREATE TABLE card(
+    card_id INT  PRIMARY KEY AUTO_INCREMENT,
+	cust_id INT NOT NULL,
+	card_number NUMERIC(16) UNIQUE,
+    bank_name VARCHAR(25) NOT NULL,
+    card_type VARCHAR(15) NOT NULL,
+	expiry date NOT NULL,
+    FOREIGN KEY(cust_id) REFERENCES customer(cust_id)
+	);
+
+
+CREATE TABLE orders(
+   order_id INT AUTO_INCREMENT PRIMARY KEY,
+   menumaster_id INT,
+   order_date DATE NOT NULL,
+   order_status VARCHAR(15) NOT NULL,
+   FOREIGN KEY(menumaster_id) REFERENCES menumaster(menumaster_id)
+);
+
+CREATE TABLE payment (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    card_id INT NOT NULL,
+    FOREIGN KEY(order_id) REFERENCES orders(order_id),
+    FOREIGN KEY(card_id) REFERENCES card(card_id),
+    );
+
+CREATE TABLE feedback (
+    feedback_id INT AUTO_INCREMENT PRIMARY KEY ,
+    order_id INT ,
+    feedback_det VARCHAR(300),
+    FOREIGN KEY(order_id) REFERENCES orders(order_id)
+    );
+
+
+INSERT INTO category VALUES ('1','Appetizers' ) , ('2','Main Course'),('3','Desserts'); 
+
+
+INSERT INTO sub_category (category_id,subcategory_name) VALUES ('1' , 'Cocktails'),
+                                                                ('1' , 'Hors d’ oeuvres'),
+                                                                ('1' , 'Canape'),
+                                                                ('1' , 'Relishes'),
+                                                                ('1' , 'Salads'),
+                                                                ('1' , 'Soup & Consommé'),
+                                                                ('1' , 'Chips & DIps');

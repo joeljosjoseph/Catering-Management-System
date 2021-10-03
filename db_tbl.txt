@@ -103,3 +103,4 @@ INSERT INTO sub_category (category_id,subcategory_name) VALUES ('1' , 'Cocktails
                                                                 ('1' , 'Salads'),
                                                                 ('1' , 'Soup & Consommé'),
                                                                 ('1' , 'Chips & DIps');
+                                                                dfsdfds

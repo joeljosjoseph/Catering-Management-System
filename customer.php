@@ -457,6 +457,7 @@ require_once('php/customer_action.php');
                 </div>
                 <div style="float: right; margin-right: 5rem;" class="mt-4 mb-5">
                     <a class="btn" href="home.php" id="item_add_cart" style="border: 1px solid black ;">Cancel </a>
+                    
                     <button class="btn" id="green-button"  type="submit">Save Changes</button>
                     <a class="btn" id="red-button" href="php/signOut.php">Sign Out</a>
                     <a class="btn" id="red-button" href="php/customer_delete.php">Delete Account</a>
